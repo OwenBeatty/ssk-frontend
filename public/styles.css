@@ -1,0 +1,82 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.game-card {
+    border-radius: 2rem;
+    border-width: 2px;
+    border-color: #212529;
+    background-color: #f3f3f3;
+}
+
+.card-header, .card-footer {
+    text-align: center;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card-footer {
+    padding: 0;
+    margin: -1px;
+}
+
+.btn-history-home {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+    border-width: 0;
+}
+
+.btn-history-home:focus {
+    outline:none;
+    box-shadow: none;
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-confirm-end-game, .btn-confirm-delete {
+    display:flex;
+    margin: auto;
+}
+
+.btn-close, .btn-end-game, .additional-player, .btn-next {
+    float: right;
+}
+
+.login-signup-redirect {
+    float:right;
+}
+
+.game-card {
+    margin-bottom: 24px;
+    min-height: 282px;
+}
+
+.new-game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    padding-left: 1rem;
+}
+
+.form-control-lg {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    text-align: center;
+    padding: 2rem;
+}
+
+.turn-row {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.username {
+    padding-right: 1rem;
+}
