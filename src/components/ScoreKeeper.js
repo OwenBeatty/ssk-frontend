@@ -70,7 +70,7 @@ function ScoreKeeper(props) {
                     </Form.Group>
                 ))}
                 <Form.Group as={Row}>
-                    <Col><HistoryModal players={props.players} scoreHistory={props.scoreHistory} totals={totals} /></Col>
+                    <Col><HistoryModal players={props.players} scoreHistory={[...props.scoreHistory, scores]} totals={totals} /></Col>
                     <Col><Button className="btn-next" variant="dark btn-form" name="btn-next" type="submit">Next</Button></Col>
                 </Form.Group>
                 
