@@ -5,6 +5,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import History from './components/History';
 import { useAuthContext } from "./hooks/useAuthContext";
+import Footer from './components/Footer';
 
 function App() {
   const { user } = useAuthContext();
@@ -29,6 +30,7 @@ function App() {
           element={!user ? <Login /> : <Navigate to="/" />}
         />
       </Routes>
+      <Footer />
     </div>
   );
 }

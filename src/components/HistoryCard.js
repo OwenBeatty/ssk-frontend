@@ -1,6 +1,5 @@
 import HistoryModal from "./HistoryModal";
 import Card from 'react-bootstrap/Card';
-import CloseButton from 'react-bootstrap/CloseButton';
 import Col from 'react-bootstrap/Col';
 import ConfirmDeleteModal from "./ConfirmDeleteModal";
 

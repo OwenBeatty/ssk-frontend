@@ -57,11 +57,12 @@ function HistoryList() {
     return (
         <Container>
             <h1 className="page-title">Game History</h1>
-            <Row xs={1} md={2} xl={3}>
+            <Row xs={1} md={games ? 2 : 1} xl={games ? 3 : 1}>
+                {games ? null : <Col></Col>}
                 <Col>
                     <Card className="game-card">
                         <Card.Body className="new-game">
-                            <Card.Title ><Link to="/newgame">{JSON.parse(localStorage.getItem("players")) ? "Continue Game" : "New Game"}</Link></Card.Title>
+                            <Card.Title><Link to="/newgame">{JSON.parse(localStorage.getItem("players")) ? "Continue Game" : "New Game"}</Link></Card.Title>
                         </Card.Body>
                     </Card>
                 </Col>

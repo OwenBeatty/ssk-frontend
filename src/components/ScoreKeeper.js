@@ -53,7 +53,7 @@ function ScoreKeeper(props) {
             <Form onSubmit={handleTurnSubmit}>
                 <Form.Group as={Row} className="turn-row">
                     <Col xs="auto"><h3 className="turn-title">Turn {turn}</h3></Col>
-                    <Col><EndGameModal handleEndGameModal={handleEndGameModal} handleEndGame={handleEndGame} players={props.players} scoreHistory={[...props.scoreHistory, scores]} totals={totals} /></Col>
+                    <Col><EndGameModal handleEndGameModal={handleEndGameModal} handleEndGame={handleEndGame} players={props.players} scoreHistory={[...props.scoreHistory, scores]} totals={totals} error={props.error} /></Col>
                 </Form.Group>
                 
                 {scores.map((score, index) => (

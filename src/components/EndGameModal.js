@@ -24,6 +24,7 @@ function EndGameModal(props) {
                         <Modal.Title>Winner: {winner}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+                        {props.error && <div className="error alert alert-danger">{props.error}</div>}
                         <Button variant="success" className="btn-confirm-end-game" onClick={props.handleEndGame}>Save Game and Exit</Button>
                         <h5>Score History</h5>
                         <Table>
