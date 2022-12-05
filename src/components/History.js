@@ -58,7 +58,7 @@ function HistoryList() {
         <Container>
             <h1 className="page-title">Game History</h1>
             <Row xs={1} md={games ? 2 : 1} xl={games ? 3 : 1}>
-                {games ? null : <Col></Col>}
+                {(!games || games.length === 0) && <Col></Col>}
                 <Col>
                     <Card className="game-card">
                         <Card.Body className="new-game">
