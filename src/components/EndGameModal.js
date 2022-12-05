@@ -7,13 +7,16 @@ import Table from 'react-bootstrap/Table';
 function EndGameModal(props) {
     const [show, setShow] = useState(props.show);
 
+    //Closes modal
     const handleClose = () => setShow(false);
 
+    //Opens modal
     const handleShow = () => {
         props.handleEndGameModal();
         setShow(true);
     }
 
+    //Calculates highest score to display winner
     const winner = props.players[props.totals.indexOf(Math.max(...props.totals))];
 
     return (

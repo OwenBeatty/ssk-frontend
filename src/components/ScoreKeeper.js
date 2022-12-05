@@ -12,6 +12,7 @@ function ScoreKeeper(props) {
 
     const totals = [];
 
+    //Calculates current score totals
     props.players.map((players, index) => (
        totals.push([...props.scoreHistory, scores].reduce((prev, next) => prev + Number(next[index]), 0))
     ));
@@ -23,6 +24,7 @@ function ScoreKeeper(props) {
         setScores(newScores);
     } 
 
+    //Saves current scores to local storage, resets score inputs, and increases turn count
     const handleTurnSubmit = (e) => {
         e.preventDefault();
 
@@ -33,6 +35,7 @@ function ScoreKeeper(props) {
         setTurn(turn + 1);
     }
 
+    //If any score inputs are blank when the end game modal is opened it sets them to 0 for display and calculation purposes
     const handleEndGameModal = () => {
         const newScores = [...scores];
         scores.forEach(function(score, index) {
@@ -43,11 +46,11 @@ function ScoreKeeper(props) {
         })
     }
 
+    //Submits game to the database
     const handleEndGame = () => {
         props.handleSubmit(scores);
     }
-//<Button variant="danger btn-form" name="btn-end" type="submit" className="btn-end-game">End Game</Button>
-//<EndGameModal handleEndGameModal={handleEndGameModal} players={props.players} scoreHistory={[...props.scoreHistory, scores]} totals={totals} />
+    
     return (
         <div>
             <Form onSubmit={handleTurnSubmit}>

@@ -7,6 +7,7 @@ import Table from 'react-bootstrap/Table';
 function HistoryModal(props) {
     const [show, setShow] = useState(false);
 
+    //Opens/closes modal
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 

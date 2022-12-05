@@ -6,10 +6,12 @@ import ConfirmDeleteModal from "./ConfirmDeleteModal";
 function HistoryCard(props) {
     const totals = [];
 
+    //Calculates totals for every player
     props.game.players.map((players, index) => (
        totals.push(props.game.scoreHistory.reduce((prev, next) => prev + Number(next[index]), 0))
     ));
 
+    //Calculates highest score to display winner
     const winner = props.game.players[totals.indexOf(Math.max(...totals))];
 
     return (

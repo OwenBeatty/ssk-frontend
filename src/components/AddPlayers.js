@@ -19,12 +19,12 @@ function AddPlayers(props) {
         props.handleSetPlayers(players);
     }
 
-    //add additional players
+    //Add additional players
     const handleAddPlayers = () => {
         setPlayers([...players, ""]);
     }
 
-    //remove additional players
+    //Remove additional players
     const handleRemovePlayers = (index) => {
         players.splice(index, 1)
         setPlayers([...players])

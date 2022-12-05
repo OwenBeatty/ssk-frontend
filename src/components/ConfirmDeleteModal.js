@@ -9,6 +9,7 @@ function ConfirmDeleteModal(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    //Used as a second step when deleted to prevent accidental deletions
     return(
         <div>
             <CloseButton onClick={handleShow} />

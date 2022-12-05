@@ -13,7 +13,7 @@ function HistoryList() {
     const { games, dispatch } = useGamesContext();
     const { user } = useAuthContext();
 
-    //fetch all games from current user to list out
+    //Fetch all games from current user to list out
     useEffect(() => {
         const fetchGames = async () => {
             const response = await fetch("https://average-tank-top-moth.cyclic.app/api/game", {
@@ -34,7 +34,7 @@ function HistoryList() {
         }
     }, [dispatch, user]);
 
-    //delete single game
+    //Delete single game
     const handleDelete = async (game) => {
         if (!user) {
             return

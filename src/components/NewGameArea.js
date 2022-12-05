@@ -14,16 +14,19 @@ function NewGameArea() {
     const [scoreHistory, setScores] = useState(JSON.parse(localStorage.getItem("scores")) ? [...JSON.parse(localStorage.getItem("scores"))] : []);
     const [error, setError] = useState(null);
 
+    //Sets player names for current game and saves them to local storage
     const handleSetPlayers = (p) => {
         localStorage.setItem("players", JSON.stringify([...p]));
         setPlayers([...p]);
     }
 
+    //Sets current scores and saves them to local storage
     const handleSetScores = (s) => {
         localStorage.setItem("scores", JSON.stringify([...scoreHistory, s]));
         setScores([...scoreHistory, s]);
     }
 
+    //Saves the game to database if the user is logged in, then removes the game from local storage
     const handleSubmit = async (s) => {
         if (!user) {
             setError("You must be logged in");
@@ -54,8 +57,6 @@ function NewGameArea() {
             localStorage.removeItem("players");
             localStorage.removeItem("scores");
             localStorage.removeItem("turn");
-
-            console.log("new game added", json);
 
             navigate("/");
         }

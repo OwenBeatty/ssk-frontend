@@ -37,7 +37,7 @@ function Signup() {
                     value={password} 
                 />
                 <p><Button variant="dark btn-form" type="submit" disabled={isLoading}>Sign Up</Button><span className="login-signup-redirect">Have an account? <Link to="/login">Log in</Link></span></p>
-                {error && <div className="error">{error}</div>}
+                {error && <div className="error alert alert-danger">{error}</div>}
                 
             </Form>
         </Container>

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 function HistoryTable(props) {
 
-
+    //Table to view turn history and totals
     return (
         <Container>
             <Row xs={2} className='flex-nowrap'>
@@ -45,22 +45,6 @@ function HistoryTable(props) {
                         </tbody>
                     </Table>
                 </Col>
-                {/* <Col xs="auto">
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {props.players.map((player, index) => (
-                                <tr>
-                                    <td>{props.allScores.reduce((prev, next) => prev + Number(next[index]), 0)}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                </Col> */}
             </Row>
         </Container>
     );

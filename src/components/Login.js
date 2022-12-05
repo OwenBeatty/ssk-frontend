@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLogin } from "../hooks/UseLogin";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 
 function Login() {
-    const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -16,7 +15,6 @@ function Login() {
         e.preventDefault();
 
         await login(username, password);
-        navigate("/");
     }
 
     return (
@@ -40,7 +38,7 @@ function Login() {
                     value={password} 
                 />
                 <p><Button variant="dark btn-form" type="submit" disabled={isLoading}>Log In</Button><span className="login-signup-redirect">No account? <Link to="/signup">Sign up</Link></span></p>
-                {error && <div className="error">{error}</div>}
+                {error && <div className="error alert alert-danger">{error}</div>}
             </Form>
         </Container>
     );
